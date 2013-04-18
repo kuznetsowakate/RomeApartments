@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rome Apartments</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="js/jCal.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script>
+
+<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+<link type="text/css" rel="stylesheet" href="font/stylesheet.css" charset ="utf-8">
+<link type="text/css" rel="stylesheet" href="css/jCal.css" charset ="utf-8">
+
+</head>
+<body>
+ <div class="header">
+	<div class="header-top">
+		<img class="header-logo" src="img/logo.png">
+		<span class="first"><em>Лучшие апартаменты Рима для Вас!</em></span>
+		<span class="last"><em>Пусть Путешествие будет приятным!</em></span>
+		<div class="val">
+		<img class="langFlag" style="margin-bottom:-5px;margin-right:5px;" src="img/flag.png" />
+		<span class="lang">RUS</span>
+		<img id="rus" style="margin-right:20px;margin-left:5px;cursor:pointer;" src="img/arrow3.png" />
+		<p class="valChange" ><span style="color:#ffac00; font-size:17px;margin-right:5px;">&#8364;</span><span> EUR<span></p>
+		<img id="euro" style="margin-left:5px;cursor:pointer;" src="img/arrow3.png" /></div>
+		
+		<div class="dropRus">
+			<p><img src="img/britanFlag.png"><span>ENG</span></p>
+			<p><img src="img/italyFlag.png"><span>ITL</span></p>
+			
+		 </div>
+		 <div class="dropEuro">
+			<p><span class="valSign">$</span> <span style="margin-left:5px;">USD</span></p>
+			<p> <span style="margin-left:15px;">RUB</span></p>
+			
+		 </div>
+		
+	</div>
+	<div class="header-brown">
+	  <div class="header-middle">
+		<div class="map">
+		<span>Город:</span></br>
+		 <div id="town" class="select">
+		   <span>Рим</span>
+		   <img src="img/town.png" />
+		 </div>
+		 <div class="dropMap">
+		 <img src="img/map.png" />
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Тип жилья:</span></br>
+		  <div id="apatrs" class="select">
+		   <span>Апартаменты</span>
+		   <img src="img/keys.png" />
+		 </div>
+		 
+		<div class="dropApart">
+			<p><img src="img/house2.png"><span>Апартаменты</span></p>
+			<p><img src="img/house2.png"><span>Дом/Вилла</span></p>
+			<p><img src="img/house.png"><span>Комната</span></p>
+			<p><img src="img/house2.png"><span>Отель</span></p>
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Дата заезда:</span></br>
+		  <div id="calendarTo"  class="select">
+		   <span>15.08.2012</span>
+		   <img style="top:10px;" src="img/calendar.png" />
+		 </div>
+		 
+		  <div class="dropCalendar" id="dropCalendar">
+			
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Дата выезда:</span></br>
+		 <div id="calendarOut" class="select">
+		   <span>21.08.2012</span>
+		   <img style="top:10px;" src="img/calendar.png" />
+		 </div>
+		 
+		 <div class="dropCalendarOut" id="dropCalendarOut"></div>
+		</div>
+		
+		<div class="guests">
+		<span>Гостей:</span></br>
+		  <div id="guests" class="select">
+		   <span>2</span>
+		   <img style="top:10px;" src="img/guests.png" />
+		 </div>
+		 
+		
+		 <div class="dropGuests scroll-pane">
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+			<p>1</p>
+
+		 </div>
+		</div>		
+		
+		<div class="variants">
+		  <input type="button"  value="Подобрать варианты"/>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="header-orange">
+		<div class="header-middle">
+			<a href="#1">Идеи для путешествий</a>
+			<a href="#1">Направления</a>
+			<a href="#1">Гостиницы</a>
+			<a href="#1">Апартаменты</a>
+			<a href="#1" class="addFlat"><img src="img/plus.png" /><span>Добавить квартиру</span></a>
+		</div>
+	</div>
+	
+	<div class="breadcrumb">
+		<div class="nextPage">
+			<a href="#1"><span>Следующий вариант</span>
+			<img src="img/nextPage.png" /></a>
+		</div>
+		
+		<div class="prevPage">
+			<a href="#1"><img src="img/prevPage.png" />
+			<span>Предыдущий вариант</span></a>
+		</div>
+
+	</div>
+	
+	<div class="apartInfoHead">
+		<img src="img/house.png" />
+		<span class="apartName">Vatican Garden Deluxe</span>
+		<p class="apartCount">Проживание для 2-х человек<br /> на протяжении 5 дней составит:</p>
+		<span class="apartPrice">&#8364;870,50</span>
+		
+		<input type="button" class="send" value="Отправить заявку" />
+	</div>
+	
+	
+ </div>
+ 
+ <div class="main" style="margin-top:40px;">
+  <div class="leftCol">
+    <div class="googleMapRect">
+	  <img src="img/map2.png">
+	</div>
+	
+	<div class="apartInfo">
+	  <span>Адрес: Via Santamaura 90, Rome, Italy</span>
+	  <span class="apartId">ID:80131</span>
+	  <p style="margin-top:10px;">Тип жилья: личные апартаменты</p> 
+	  <p>Этаж: 3</p>
+	  <p>Лифт: есть</p>
+	  <p>Максимальное размещение: 5 гостей</p>
+	  <p>Спальни: 2</p>
+	  <p>Ванная комната: 1</p>
+	  <p>Общая площадь: 650 м<span class="squared">2</span></p>
+	</div>
+	
+	<div class="details">
+		<img src="img/details.png" />
+		<p class="detailDescr">Подробное описание</p>
+		
+		<p>Сдаётся однокомнатная квартира в пешей доступности от метро Медведково. Квартира в хорошем состоянии, после косметического ремонта. Со всей необходимой для комфортного проживания мебелью и техникой. Застекленная лоджия. Предоставляется чистое постельное бельё, полотенца. Развитая инфраструктура. Сутки - 2500 руб, залог 2500руб. Размещение - не более ДВУХ человек. Славян или европейцев, Кавказ и Азия не рассматриваются. В квартире не курить.</p>
+		
+		<p>Сдаётся однокомнатная квартира в пешей доступности от метро Медведково. Квартира в хорошем состоянии, после косметического ремонта. Со всей необходимой для комфортного проживания мебелью и техникой. Застекленная лоджия. Предоставляется чистое постельное бельё, полотенца. Развитая инфраструктура. Сутки - 2500 руб, залог 2500руб. Размещение - не более ДВУХ человек. Славян или европейцев, Кавказ и Азия не рассматриваются. В квартире не курить.</p>
+	</div>
+  </div>
+  
+  <div class="rightCol">
+   <div class="galery">
+	<img class="mainGaleryImg" src="img/pic4.png" />
+	<div class="otherGaleryImg">
+	  <div class="galeryLeft"></div>
+	
+	  <div class="galeryRight"></div>
+	  
+	  
+		<div class="thumb">
+		  <div class="thumbCild">
+
+			<div><img class="thumbGaleryImg" src="img/pic5.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic6.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic7.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic8.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic9.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic10.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic5.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic8.png" /></div>
+			<div><img class="thumbGaleryImg" src="img/pic10.png" /></div>
+
+		  </div>
+		</div>
+      
+	</div>
+   </div>
+   
+   <div class="calendarPrice">
+	<p class="calendarTop">Календарь размещения и цены</p>
+	<div class="calendarSpace">
+		<div id="calendarPrice">
+		</div>
+		
+		<div class="pinkSquare"></div> 
+		<p>Апартаменты не свободны</p>
+		
+		<div class="priceTitle">
+			<p style="margin-right:120px;">Prices</p>
+			<p>Price per night</p>
+			<p>Weekend price<br /> per night</p>
+			<p>7+ nights</p>
+			<p>28+ nights</p>
+		</div>
+		
+		<div class="price">
+			<p style="margin-right:120px;">General price</p>
+			<p>2,019.20 p.</p>
+			<p>2,019.20 p.</p>
+			<p>1,817.28 p.</p>
+			<p>1,413.44 p.</p>
+		</div>
+    </div>
+   
+  </div>
+  
+ 
+ </div>
+ 
+  <div class="sendBottom"><input class="send" type="button" value="Отправить заявку" />
+  </div>
+  
+  <div class="links">
+	<p class="rent">Аренда гостевого дома, квартиры, виллы, шале или дома для летнего отдыха, дома на лыжном курорте<br /> или апартаментов на выходные от Rome-apartments.ru</p>
+	
+	<p class="aparts">Виллы в Испании | Гостевые дома во франции | Коттеджи в Великобритании | Гостевые дома в Хорватии | Гостевые дома в Дании<br />
+    Шале в Швейцарии | Выходные в Париже | Выходные в Барселоне | С самостоятельной организацией питания в Португалии<br /> 
+	Проживание на Коста дель Соль | Виллы на Малаге | Виллы на Майорке</p>
+  </div>
+    </div>
+ 
+ <div class="footer">
+  <div class="footer-inside">
+	<div class="footer1">
+	  <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer2">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer3">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer4">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+   </div>
+ </div>
+</body>
+</html>

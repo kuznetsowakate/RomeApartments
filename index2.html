@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rome Apartments</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript" src="js/jCal.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script>
+
+
+<link type="text/css" rel="stylesheet" href="font/stylesheet.css" charset ="utf-8">
+<link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+<link type="text/css" rel="stylesheet" href="css/jCal.css" charset ="utf-8">
+
+
+</head>
+<body>
+ <div class="header big">
+	<div class="header-topBig">
+		<img class="header-logo" src="img/logo.png">
+		<span class="first"><em>Лучшие апартаменты Рима для Вас!</em></span>
+		<span class="last"><em>Пусть Путешествие будет приятным!</em></span>
+		<div class="val">
+		<img class="langFlag"  style="margin-bottom:-5px;margin-right:5px;" src="img/flag.png" />
+		<span class="lang">RUS</span>
+		<img id="rus" style="margin-right:20px;margin-left:5px;cursor:pointer;" src="img/arrow3.png" />
+		<p class="valChange" ><span class="valSign">&#8364;</span><span style="margin-left:5px;"> EUR<span></p>
+		<img id="euro" style="margin-left:5px;cursor:pointer;" src="img/arrow3.png" /></div>
+		
+		<div class="dropRus">
+			<p><img src="img/britanFlag.png"><span>ENG</span></p>
+			<p><img src="img/italyFlag.png"><span>ITL</span></p>
+			
+		 </div>
+		 <div class="dropEuro">
+			<p><span class="valSign">$</span> <span style="margin-left:5px;">USD</span></p>
+			<p> <span style="margin-left:15px;">RUB</span></p>
+			
+		 </div>
+		 
+	</div>
+	<div class="header-transparent">
+	  <div class="header-middle">
+		<div class="map">
+		<span>Город:</span></br>
+		 <div id="town" class="select">
+		   <span>Рим</span>
+		   <img src="img/town.png" />
+		 </div>
+		 <div class="dropMap">
+		 <img src="img/map.png" />
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Тип жилья:</span></br>
+		  <div id="apatrs" class="select">
+		   <span>Апартаменты</span>
+		   <img src="img/keys.png" />
+		 </div>
+		 
+		 <div class="dropApart">
+			<p><img src="img/house2.png"><span>Апартаменты</span></p>
+			<p><img src="img/house2.png"><span>Дом/Вилла</span></p>
+			<p><img src="img/house.png"><span>Комната</span></p>
+			<p><img src="img/house2.png"><span>Отель</span></p>
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Дата заезда:</span></br>
+		  <div id="calendarTo" class="select">
+		   <span>15.08.2012</span>
+		   <img style="top:10px;" src="img/calendar.png" />
+		 </div>
+		 
+		 <div class="dropCalendar" id="dropCalendar">
+			
+		 </div>
+		</div>
+		
+		<div class="map">
+		<span>Дата выезда:</span></br>
+		 <div id="calendarOut" class="select">
+		   <span>21.08.2012</span>
+		   <img style="top:10px;" src="img/calendar.png" />
+		 </div>
+		 
+		 <div class="dropCalendarOut" id="dropCalendarOut"></div>
+		 
+		</div>
+		
+		<div class="guests">
+		<span>Гостей:</span></br>
+		  <div id="guests" class="select">
+		   <span>2</span>
+		   <img style="top:10px;" src="img/guests.png" />
+		 </div>
+
+		 
+		 <div class="dropGuests scroll-pane">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+
+		 </div>
+		</div>
+		
+		<div class="variants">
+		  <input type="button"  value="Подобрать варианты">
+		</div>
+	  </div>
+	</div>
+	
+	<div class="header-orange">
+		<div class="header-middle">
+			<a href="#1">Идеи для путешествий</a>
+			<a href="#1">Направления</a>
+			<a href="#1">Гостиницы</a>
+			<a href="#1">Апартаменты</a>
+			<a href="#1" class="addFlat"><img src="img/plus.png" /><span>Добавить квартиру</span></a>
+		</div>
+	</div>
+
+	
+
+	
+	
+ </div>
+ 
+ <div class="main">
+   <div class="main-top">
+	<div class="ourBest">
+		<img class="ourBestImg" src="img/ourBest.png" />
+		<p class="ourBestHeader">Наши лучшие предложения!</p>
+		<div class="brownLineTop">
+			<div class="contentNav">
+			<a href="#1" style="background:url(img/brownArrow.png) no-repeat center bottom" name="1">1</a>
+			<a href="#1" name="2">2</a>
+			<a href="#1" name="3">3</a>
+			<a href="#1" name="4">4</a>
+			<a href="#1" name="5">5</a>
+			<a href="#1" name="6">6</a>
+			<a href="#1" name="7">7</a>
+			<a href="#1" name="8">8</a>
+			<a href="#1" name="9">9</a>
+			<a href="#1" name="10">10</a>
+			
+		</div></div>
+		
+		<div class="slideContent" style="display:block;" id="1"><img  class="mainImg" src="img/pic11.png" />		
+		<div class="brownLineBottom">
+			<span>Via Santamaura 9, Rome<br />
+			10 спальных мест, от €366 за ночь</span>
+			<input type="button" class="knowMore" value="Ознакомиться" >
+		</div>
+		</div>
+		
+		<div class="slideContent" id="2"><img  class="mainImg"  src="img/pic9.png" />		
+		<div class="brownLineBottom">
+			<span>Просто текст для примера1</span>
+			<input type="button" class="knowMore" value="Ознакомиться" >
+		</div>
+		</div>
+		
+		<div class="slideContent" id="3"><img  class="mainImg" src="img/pic10.png" />		
+		<div class="brownLineBottom">
+			<span>Просто текст для примера2</span>
+			<input type="button" class="knowMore" value="Ознакомиться" >
+		</div>
+		</div>
+	</div>
+	
+	<div class="ourContacts">
+		<img src="img/contacts.png" />
+		<p class="ourContactsHeader">Мы на связи</p>
+		
+		<p style="padding-top:50px;">
+		  Если у Вас возникли вопросы, <br />
+		  наши операторы оперативно ответят!
+		</p>
+		
+		
+		
+		<a href="#1"><img class="contactPhoneIcon" src="img/phone.png"><span class="contactPhone">Телефон</span></a>
+		<a href="#1"><img class="contactEmailIcon" src="img/email.png"><span class="contactEmail">E-mail</span></a>
+		<a href="#1"><img class="contactChatIcon" src="img/chat.png"><span class="contactChat">Чат</span></a>
+		
+		<p style="position:absolute; top:235px;">
+		 Также Вы можете посмотреть<br />
+		 наши ответы на наиболее <br />
+		 <a href="#1" style="color:#f64f00;">часто задаваемые вопросы</a>
+		</p>
+		
+		<a href="#1"><img class="contactFb" src="img/fb.png"></a>
+		<a href="#1"><img class="contactTwitter" src="img/twitter.png"></a>
+		<a href="#1"><img class="contactVk" src="img/vk.png"></a>
+		
+	</div>
+	
+	<div class="ourGuaranty">
+		<img src="img/guaranty.png" />
+		<p class="ourGuarantyHeader">Наши гарантии</p>
+		
+		<p style="padding-top:60px;">В Риме сосредоточено столько исторических и культурных ценностей, что иногда его называют  музеем под открытым небом. </p>
+
+		<p>Все дороги ведут в этот «Вечный город». Колизей, руины Форума в центре города и восхитительный фонтан Треви. </p>
+
+		<p>Теперь самостоятельно составить тур в «Вечный город» проще простого!
+		На нашем сайте вы можете найти большой выбор апартаментов в Риме.
+		Все дороги ведут в этот «Вечный город». 
+		</p>
+	</div>
+   </div>
+   
+   <div class="main-middle">
+	<div class="romeAparts">
+		<img src="img/romeAparts.png" />
+		
+		<p class="romeApartsHeader">Апартаменты в Риме</p>
+		
+		<img class="romeRoundImage" src="img/rome.png" />
+		
+	<p class="pMain" style="margin-left:90px;">Снять апартаменты в Риме, в музее под открытым небом</p>
+	<p >&nbsp;&nbsp;В Риме сосредоточено столько исторических и культурных ценностей, что иногда его называют  музеем
+под открытым небом. Все дороги ведут в этот «Вечный город», который без преувеличения можно назвать самым величественным в мире. Тем, кто никогда не бывал в Риме, им еще только предстоит влюбиться в него, увидев Колизей, руины Форума в центре города и восхитительный фонтан Треви. 
+
+<p class="pMain">Выбираем апартаменты в Риме
+
+    <p >&nbsp;&nbsp;Теперь самостоятельно составить тур в «Вечный город» проще простого! На нашем сайте вы можете найти большой выбор апартаментов в Риме. Самые лучшие посуточные квартиры расположены в центре города, рядом с главными достопримечательностями. Снимая апартаменты в центре Рима, вы не будете тратить время на переезды, сможете больше ходить пешком и даже восхититься красотой ночного города. 
+    <p >&nbsp;&nbsp;Если ваша цель – сэкономить по максимуму, арендуйте квартиру или дом на окраине Рима, откуда можно легко доехать до центра на автобусе или метро. Недорогие апартаменты также найдете недалеко от железнодорожного вокзала Рима «Термини». На площади около вокзала есть несколько остановок общественного и туристического автобусов, а также станции метро Termini и RepublicaTeatro del Opera. Близость вокзала никак не помешает вашему спокойствию в квартире посуточно: все поезда ходят практически бесшумно, а сам вокзал больше похож на торговый центр, где можно устроить отличный шопинг. К тому же близость вокзала может сподвигнуть вас на поездку, например, в Неаполь или Флоренцию. 
+
+<p class="pMain">Шопинг, шопинг, шопинг!</p>
+<p >&nbsp;&nbsp;Если, гуляя по Риму, вы добрели до площади Испании и свернули на улицу Кондотти, уверяем, вы сразу потеряете интерес ко всем историческим достопримечательностям! Именно тут находятся бутики самых известных брендов мира. Улица Кондотти выведет на широкую улицу Корсо, на ней расположено большинство торговых центров. Отличные частные магазинчики, где можно найти шикарные вещи за низкую цену, затерялись на узких уютных улочках. Чтобы больше времени осталось на покупки, предлагаем снять апартаменты рядом с главными торговыми улицами Рима. Конечно, апартаменты в центре Рима стоят немного дороже, чем на окраине, но зато вы будете экономить на переездах.</p> 
+	</div>
+	  <div class="main-middle-left">
+		<div class="whyWe">
+			<img src="img/whyWe.png" />
+			<p class="whyWeHeader">Почему мы?</p>
+			
+			<p style="padding-top:50px;"> В Риме сосредоточено столько исторических и культурных ценностей, что иногда его называют  музеем под открытым небом. </p> 
+
+<p>Все дороги ведут в этот «Вечный город». Колизей, руины Форума в центре города и восхитительный фонтан Треви. </p> 
+
+<p>Теперь самостоятельно составить тур в «Вечный город» проще простого!
+На нашем сайте вы можете найти большой выбор апартаментов в Риме.</p> 
+		</div>
+		
+		<div class="ourPartners">
+			<div class="partners">
+				<p class="partnersHeader">Наши партнеры</p>
+				<a href="#1"><img class="partnersLogo3" src="img/logo3.png" /></a>
+				<a href="#1"><img class="partnersLogo2" src="img/logo2.png" /></a>
+				<a href="#1"><img class="partnersLogo1" src="img/logo1.png" /></a>
+			</div>
+		</div>
+	  </div>
+   </div>
+   
+   <div class="main-bottom">
+   
+   
+	<div class="hotBlock" style="margin-left:0;">
+		
+		<img class="orangeRound" src="img/orangeRound.png" />
+		<span class="persent">-20%</span>
+		
+		<p style="margin:10px 5px 5px 5px;" ><img class="flag" src="img/swissFlag.png" />
+		<span class="placeName">Moleson, Switzerland</span></p>
+		
+		<div class="brownLinePrice">
+		
+		<span><s>&#036;474</s></span>
+		<a href="#1"><b>&#036;345/</b>ночь</a>
+		</div>
+		
+		<img class="hotblockMainImg" src="img/pic20.png" />
+		
+		<p class="rentTime">23-30 апреля 2012г</p>
+		<p class="placeCount"> спальни (мест 4)</p>
+		
+		<div class="moreBottom"><a href="#1">Подробнее</a></div>
+		
+	</div>
+	
+	<div class="hotBlock">
+		
+		<img class="orangeRound" src="img/orangeRound.png" />
+		<span class="persent">-30%</span>
+		
+		<p style="margin:10px 5px 5px 5px;" ><img class="flag" src="img/austriaFlag.png" />
+		<span class="placeName">Telfs, Austria</span></p>
+		
+		<div class="brownLinePrice">
+		
+		<span><s>&#036;474</s></span>
+		<a href="#1"><b>&#036;575/</b>ночь</a>
+		</div>
+		
+		<img class="hotblockMainImg" src="img/pic20.png" />
+		
+		<p class="rentTime">23-30 апреля 2012г</p>
+		<p class="placeCount"> спальни (мест 4)</p>
+		
+		<div class="moreBottom"><a href="#1">Подробнее</a></div>
+	</div>
+	
+	<div class="hotBlock">
+		
+		<img class="orangeRound" src="img/orangeRound.png" />
+		<span class="persent">-20%</span>
+		
+		<p style="margin:10px 5px 5px 5px;" ><img class="flag" src="img/andoraFlag.png" />
+		<span class="placeName">Ordino, Andorra</span></p>
+		
+		<div class="brownLinePrice">
+		
+		<span><s>&#036;474</s></span>
+		<a href="#1"><b>&#036;1024/</b>ночь</a>
+		</div>
+		
+		<img class="hotblockMainImg" src="img/pic20.png" />
+		
+		<p class="rentTime">23-30 апреля 2012г</p>
+		<p class="placeCount"> спальни (мест 4)</p>
+		
+		<div class="moreBottom"><a href="#1">Подробнее</a></div>
+	</div>
+	
+	<div class="hotBlock">
+		
+		<img class="orangeRound" src="img/orangeRound.png" />
+		<span class="persent">-40%</span>
+		
+		<p style="margin:10px 5px 5px 5px;" ><img class="flag" src="img/swissFlag.png" />
+		<span class="placeName">Villars-sur-Ollon</span></p>
+		
+		<div class="brownLinePrice">
+		
+		<span><s>&#036;474</s></span>
+		<a href="#1"><b>&#036;345/</b>ночь</a>
+		</div>
+		
+		<img class="hotblockMainImg" src="img/pic20.png" />
+		
+		<p class="rentTime">23-30 апреля 2012г</p>
+		<p class="placeCount"> спальни (мест 4)</p>
+		
+		<div class="moreBottom"><a href="#1">Подробнее</a></div>
+		
+		
+	</div>
+	
+	<div class="hotBlock">
+		
+		<img class="orangeRound" src="img/orangeRound.png" />
+		<span class="persent">-25%</span>
+		
+		<p style="margin:10px 5px 5px 5px;" ><img class="flag" src="img/austriaflag.png" />
+		<span class="placeName">Mayrhofen, Austria</span></p>
+		
+		<div class="brownLinePrice">
+		
+		<span><s>&#036;474</s></span>
+		<a href="#1"><b>&#036;345/</b>ночь</a>
+		</div>
+		
+		<img class="hotblockMainImg" src="img/pic20.png" />
+		
+		<p class="rentTime">23-30 апреля 2012г</p>
+		<p class="placeCount"> спальни (мест 4)</p>
+		
+		<div class="moreBottom"><a href="#1">Подробнее</a></div>
+	</div>
+	
+   </div>
+ 
+ </div>
+  
+  <div class="links" style="margin-top:30px;">
+	<p class="rent">Аренда гостевого дома, квартиры, виллы, шале или дома для летнего отдыха, дома на лыжном курорте<br /> или апартаментов на выходные от Rome-apartments.ru</p>
+	
+	<p class="aparts">Виллы в Испании | Гостевые дома во франции | Коттеджи в Великобритании | Гостевые дома в Хорватии | Гостевые дома в Дании<br />
+    Шале в Швейцарии | Выходные в Париже | Выходные в Барселоне | С самостоятельной организацией питания в Португалии<br /> 
+	Проживание на Коста дель Соль | Виллы на Малаге | Виллы на Майорке</p>
+  </div>
+ 
+ <div class="footer">
+  <div class="footer-inside">
+	<div class="footer1">
+	  <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer2">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer3">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+	<div class="footer4">
+	   <p>Компания</p>
+		<ul class="footer-info">
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">Наша команда</a></li>
+		  <li><a href="#1">Наши партнеры</a></li>
+		  <li><a href="#1">О компании</a></li>
+		  <li><a href="#1">О компании</a></li>
+		</ul>
+	</div>
+   </div>
+ </div>
+</body>
+</html>
